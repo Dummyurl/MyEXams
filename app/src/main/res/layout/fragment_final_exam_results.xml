@@ -1,0 +1,95 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayDarker"
+    tools:context="com.saxxis.myexams.fragments.profiletabhosts.purcahasepackages.FinalExamResultsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Total Purchased Packages : "/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:padding="5dp"
+                android:textColor="@color/a_color"
+                android:layout_height="wrap_content"
+                android:id="@+id/total_questions"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Attempted Exams :"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:padding="5dp"
+                android:textColor="@color/a_color"
+                android:layout_height="wrap_content"
+                android:id="@+id/attempt_exams"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Un-Attempted Exams :"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:padding="5dp"
+                android:textColor="@color/a_color"
+                android:layout_height="wrap_content"
+                android:id="@+id/unattempt_exams"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

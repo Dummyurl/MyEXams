@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.saxxis.myexams.fragments.packages.SinglePackage">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu"
+        android:id="@+id/spinner_single_filter"
+        android:layout_gravity="right|end"
+        android:padding="10dp"
+        android:layout_margin="5dp"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/single_progress"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="No Data Found For This Category..."
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:id="@+id/nodatafoundsingle"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recv_single_packages"/>
+
+
+</LinearLayout>

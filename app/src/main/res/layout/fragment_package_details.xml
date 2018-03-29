@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayDarker"
+    tools:context="com.saxxis.myexams.fragments.profiletabhosts.purcahasepackages.PackageDetailsFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="gone"
+        android:text="You Have Not Purchased Any Package Yet!"
+        android:id="@+id/nopackageyet"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recv_packagedetails"/>
+
+</FrameLayout>

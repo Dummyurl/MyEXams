@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.saxxis.myexams">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".app.MyExamsApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/login"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ExamsListActivity"
+            android:label="@string/title_activity_exams"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.CurrentAffairsActivity"
+            android:label="@string/title_activity_current_affairs"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.AcademicsActivity"
+            android:label="@string/academics"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ExamPapersActivity"
+            android:label="@string/exampaper"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CAffDetailActivity"
+            android:parentActivityName=".activities.CurrentAffairsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.CurrentAffairsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ExamsDescriptionActivity"
+            android:label="@string/title_activity_exams_description"
+            android:parentActivityName=".activities.SubjectsSubListActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.SubjectsSubListActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SubjectsActivity"
+            android:label="@string/subjects"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SubjectsSubListActivity"
+            android:label="@string/CategoryList"
+            android:parentActivityName=".activities.SubjectsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.SubjectsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.RegistrationActivity"
+            android:parentActivityName=".activities.LoginActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saxxis.myexams.activities.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".activities.AcademicSubListingActivity"
+            android:parentActivityName=".activities.AcademicsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AcademicsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.LatestUpdatesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.examsresults.MyResultsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TimeLineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.exampapers.ExamInstructsActivity"
+            android:label="Exam Paper"
+            android:parentActivityName=".activities.ExamsDescriptionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.ExamsDescriptionActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FilterActivity"
+            android:label="Select Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EducationNewsActivity"
+            android:label="Latest Updates"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.filters.NotificationFilter"
+            android:label="Notifications"
+            android:parentActivityName=".activities.NotificationActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name=".activities.NotificationActivity"
+                android:value="android.support.PARENT_ACTIVITY" />
+        </activity>
+        <activity
+            android:name=".activities.EducaitonDetailedActivity"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name=".activities.MustReadDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DetailedNotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrderDetailsActivity"
+            android:label="Order Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyPurchasedExamsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CurrentAffairsQuizzActivity"
+            android:label="Current Affairs Quiz"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TermsAndConditionsActivity"
+            android:label="Terms &amp; Conditions"
+            android:parentActivityName=".activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ForgotChangePasswordActivity"
+            android:label="Change Your Password"
+            android:parentActivityName=".activities.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.CAInEnglishActivity" />
+        <activity android:name=".activities.CAInTeluguActivity" />
+        <activity android:name=".activities.CAInHindiActivity"></activity>
+        <activity android:name=".activities.SliderImageDetailsActivity"></activity>
+    </application>
+
+</manifest>

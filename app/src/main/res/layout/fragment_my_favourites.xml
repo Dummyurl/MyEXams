@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.saxxis.myexams.fragments.profiletabhosts.MyFavouritesFragment">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/progress_fav"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="gone"
+        android:text="No Favourites Found"
+        android:id="@+id/nofavfound"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_favlist"
+        android:visibility="gone"
+        android:orientation="vertical">
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="My Facourites"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:background="@color/blue"-->
+        <!--android:textSize="16dp"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:id="@+id/question_number"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_favorite"
+                android:id="@+id/remove_favourite"
+                android:textColor="@color/black"/>
+
+            <!--<ImageView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--app:srcCompat="@drawable/ic_report"-->
+                <!--android:id="@+id/report_question"-->
+                <!--android:textColor="@color/black"/>-->
+        </LinearLayout>
+
+        <com.saxxis.myexams.helper.utils.CustomViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/fav_custmviewpager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </LinearLayout>
+</FrameLayout>

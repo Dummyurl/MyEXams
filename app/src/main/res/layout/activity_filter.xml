@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.saxxis.myexams.activities.FilterActivity">
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/recv_categories"/>-->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/filter_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/dropdown"
+        android:drawableEnd="@drawable/dropdown"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:hint="Select Class"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:id="@+id/id_fil_class"
+        android:background="@drawable/edittextbackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/dropdown"
+        android:drawableEnd="@drawable/dropdown"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:hint="Select Subject"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:id="@+id/id_fil_subject"
+        android:background="@drawable/edittextbackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/dropdown"
+        android:drawableEnd="@drawable/dropdown"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:hint="Select Test Series"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:id="@+id/id_fil_test_series"
+        android:background="@drawable/edittextbackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/dropdown"
+        android:drawableEnd="@drawable/dropdown"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:hint="Select Mock Test"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:id="@+id/id_fil_sub_chapter"
+        android:background="@drawable/edittextbackground"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:ems="5"
+        android:id="@+id/filtersearch"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorAccent"
+        android:text="@string/filter_instructions"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="3dp"
+        android:id="@+id/inst_one"
+        android:textColor="@color/colorPrimaryDark"
+        android:text=">> Class"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:id="@+id/inst_two"
+        android:textColor="@color/colorPrimaryDark"
+        android:text=">> Class + Subject"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:id="@+id/inst_three"
+        android:textColor="@color/colorPrimaryDark"
+        android:text=">> Class + Subject + TextSeries"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:id="@+id/inst_four"
+        android:textColor="@color/colorPrimaryDark"
+        android:text=">> Class + Subject + TestSeries + MockTest"/>
+
+    </LinearLayout>
+   </ScrollView>
+</LinearLayout>

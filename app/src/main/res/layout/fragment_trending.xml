@@ -1,0 +1,113 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayDarker"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.saxxis.myexams.fragments.TrendingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="Trending Now"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/colorAccent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Active Exams (exam date)"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/orange"/>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayDarker"
+        android:id="@+id/trending_activeexamswebview"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adbannerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.14"
+            ads:adSize="SMART_BANNER"
+            android:layout_gravity="bottom"
+            ads:adUnitId="@string/banner_home_footer"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Active Notifications (last date)"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/orange"/>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrayDarker"
+            android:id="@+id/trending_activenotification"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Trending News"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/orange"/>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayDarker"
+        android:id="@+id/trending_newswebview"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adbannerView_footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        ads:adSize="SMART_BANNER"
+        android:layout_gravity="bottom"
+        ads:adUnitId="@string/banner_home_footer"/>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrayDarker"
+            android:id="@+id/trending_trendnowbottom"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adbannerView_footer_abbyss"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.14"
+            ads:adSize="SMART_BANNER"
+            android:layout_gravity="bottom"
+            ads:adUnitId="@string/banner_home_footer"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

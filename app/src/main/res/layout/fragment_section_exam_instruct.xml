@@ -1,0 +1,42 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.saxxis.myexams.fragments.SectionExamInstructFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:tabIndicatorColor="@color/white"
+        app:tabBackground="@drawable/examtab"
+        app:tabTextColor="@android:color/holo_blue_light"
+        app:tabSelectedTextColor="@color/black"
+        app:layout_scrollFlags="scroll"
+        app:tabMode="scrollable"
+        android:id="@+id/tab_section_title">
+        <android.support.design.widget.TabItem
+            android:layout="@layout/exam_tab_mark"
+            android:text="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/examtab"
+            android:icon="@drawable/correct_ans"/>
+    </android.support.design.widget.TabLayout>
+
+    <com.saxxis.myexams.helper.utils.CustomViewPager
+        android:id="@+id/exp_sec_exam_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

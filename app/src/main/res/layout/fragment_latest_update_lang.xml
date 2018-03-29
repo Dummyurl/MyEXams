@@ -1,0 +1,178 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.saxxis.myexams.fragments.latestupdates.LatestUpdateLangFragment">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progressbar_educationnews"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.08"
+            android:orientation="horizontal">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="3dp"-->
+                <!--android:paddingBottom="3dp"-->
+                <!--android:layout_margin="1dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:hint=" English"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:id="@+id/select_language"-->
+                <!--android:textColorHint="@color/black"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:drawableEnd="@drawable/dropdown"-->
+                <!--android:drawableRight="@drawable/dropdown"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:background="@drawable/filter_collector"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:hint=" Latest Updates Categories"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:id="@+id/select_latestupdatecategory"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:drawableEnd="@drawable/dropdown"
+                android:drawableRight="@drawable/dropdown"
+                android:gravity="center_vertical"
+                android:background="@drawable/filter_collector"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:hint=" Must Read Category"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:id="@+id/select_mustreadcategory"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:drawableEnd="@drawable/dropdown"
+                android:drawableRight="@drawable/dropdown"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:background="@drawable/filter_collector"/>
+
+        </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:id="@+id/recv_educationews"/>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.12"
+            ads:adSize="SMART_BANNER"
+            android:layout_gravity="bottom"
+            ads:adUnitId="@string/banner_home_footer">
+        </com.google.android.gms.ads.AdView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        android:id="@+id/bottom_sheet"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:text="Select Your Category"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="top"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="cancel"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="10dp"-->
+                <!--android:textSize="14sp"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:background="@color/colorPrimaryDark"-->
+                <!--android:id="@+id/cancel_filter"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:padding="10dp"-->
+                <!--android:textSize="14sp"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:text="select"-->
+                <!--android:background="@color/colorPrimaryDark"-->
+                <!--android:id="@+id/filter_selection"/>-->
+
+        <!--</LinearLayout>-->
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewFilterCategory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

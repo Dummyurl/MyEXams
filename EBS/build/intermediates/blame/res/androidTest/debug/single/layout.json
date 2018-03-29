@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\list_group.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\list_group.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_payment_details.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_payment_details.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_debitcard.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_debitcard.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_storedcard.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_storedcard.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_netbanking.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_netbanking.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_cashcard.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_cashcard.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_img_cvv.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_img_cvv.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\adapter_customalert.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\adapter_customalert.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\adapter_item_major_bank.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\adapter_item_major_bank.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_creditcard.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_creditcard.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\inflater_amount.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\inflater_amount.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_payment.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_payment.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\list_popup.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\list_popup.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\list_storedcard.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\list_storedcard.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\payment_detail2.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\payment_detail2.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\adapter_major_banks.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\adapter_major_banks.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_idle_time_out.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_idle_time_out.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\inflate_discurency.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\inflate_discurency.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\tes_transaction_details.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\tes_transaction_details.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_payment_failure.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_payment_failure.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\list_row.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\list_row.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_major.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\item_major.xml"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\list_storedcard_popup.xml",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\layout\\list_storedcard_popup.xml"
+    }
+]

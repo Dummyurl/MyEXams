@@ -1,0 +1,222 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.saxxis.myexams.fragments.ExamInstructFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/question_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:textColor="@color/black" />
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+                <TextView
+                    android:id="@+id/corrscore"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableLeft="@drawable/correct_ans"
+                    android:drawablePadding="3dp"
+                    android:drawableStart="@drawable/correct_ans"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:textColor="@color/colorGreenDark" />
+
+                <TextView
+                    android:id="@+id/wscore"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableLeft="@drawable/wrong_ans"
+                    android:drawablePadding="3dp"
+                    android:drawableStart="@drawable/wrong_ans"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:textColor="@color/colorRedDark" />
+                <!--</LinearLayout>-->
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/passageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                android:text="@string/title_activity_exams"
+                android:textAlignment="textStart"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/question_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                android:text="@string/title_activity_exams"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_ansgp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:id="@+id/rb_ans_1"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:id="@+id/rb_ans_2"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:id="@+id/rb_ans_3"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:id="@+id/rb_ans_4"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/black"/>-->
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_weight="0.09"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/saveAndNext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|left|center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1.5"
+            android:background="@color/colorBlueLight"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Save and Next"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|left|center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/colorBlueLight"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Skip"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|left|center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/colorBlueLight"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Clear"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/next"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start|left"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/colorBlueLight"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="Next"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="14sp" />-->
+
+        <TextView
+            android:id="@+id/markForReview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end|center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorBlueLight"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/markForReview"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

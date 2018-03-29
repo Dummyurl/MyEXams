@@ -1,0 +1,78 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.saxxis.myexams.fragments.profiletabhosts.MyResultsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nodata_text"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:text="You Have Not Taken Any Exam Yet!"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:padding="2dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Quiz Result List"
+                android:textSize="14sp" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:padding="2dp"-->
+                <!--android:textColor="@color/colorPrimaryDark"-->
+                <!--android:text="Quiz"-->
+                <!--android:textSize="14sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="0.2"-->
+                <!--android:padding="2dp"-->
+                <!--android:textColor="@color/colorPrimaryDark"-->
+                <!--android:text="Details"-->
+                <!--android:textSize="14sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="0.3"-->
+                <!--android:padding="2dp"-->
+                <!--android:textColor="@color/colorPrimaryDark"-->
+                <!--android:text="Explanation"-->
+                <!--android:textSize="14sp" />-->
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recv_myresults"/>
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

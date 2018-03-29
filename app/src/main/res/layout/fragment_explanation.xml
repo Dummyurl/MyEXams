@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.saxxis.myexams.fragments.myresult.ExplanationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:tabIndicatorColor="@color/white"
+        app:tabBackground="@drawable/examtab"
+        app:tabTextColor="@android:color/holo_blue_light"
+        app:tabSelectedTextColor="@color/black"
+        app:layout_scrollFlags="scroll"
+        app:tabMode="scrollable"
+        android:visibility="gone"
+        android:id="@+id/tab_sections"/>
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:tabIndicatorColor="@color/white"
+        app:tabBackground="@drawable/examtab"
+        app:tabTextColor="@android:color/holo_blue_light"
+        app:tabSelectedTextColor="@color/black"
+        app:layout_scrollFlags="scroll"
+        app:tabMode="scrollable"
+        android:id="@+id/tab_explayout"/>
+
+    <com.saxxis.myexams.helper.utils.CustomViewPager
+        android:id="@+id/exp_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>
+
+
+</LinearLayout>

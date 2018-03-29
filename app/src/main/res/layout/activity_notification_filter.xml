@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.saxxis.myexams.activities.filters.NotificationFilter">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/notffilter_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/dropdown"
+        android:drawableEnd="@drawable/dropdown"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:hint="Select Category"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:id="@+id/id_filnotf_catogry"
+        android:background="@drawable/edittextbackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/dropdown"
+        android:drawableEnd="@drawable/dropdown"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:hint="Select Qualification"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:id="@+id/id_filnotf_qualification"
+        android:background="@drawable/edittextbackground"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:ems="5"
+        android:id="@+id/notify_filtersearch"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
+</LinearLayout>

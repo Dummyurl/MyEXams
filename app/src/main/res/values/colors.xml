@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#af251b</color>
+    <color name="colorAccent">#1a0665</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="subtxtcolor">#f8da2c</color>
+    <color name="light_gray">#f7f7f7</color>
+    <color name="colorGreenDark">#56a403</color>
+    <color name="colorGrayDarker">#d4d4d4</color>
+    <color name="colorBlueLight">#00ddff</color>
+    <color name="darkgrey">#acaeae</color>
+    <color name="colorSafronDark">#00a5d7</color>
+    <color name="colorRedDark">#ff3612</color>
+    <color name="darkGray">#e1e1e1</color>
+    <color name="orange">#ffaa00</color>
+    <color name="profile_back">#323C46</color>
+
+    <color name="timeline">#ff945f</color>
+    <color name="colorGray">#878787</color>
+
+</resources>

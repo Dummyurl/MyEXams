@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.saxxis.myexams.activities.TermsAndConditionsActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_termscond"
+            app:titleTextColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:id="@+id/progressbarterms"/>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="14sp"
+        android:layout_gravity="start"
+        android:textAlignment="textStart"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:id="@+id/txt_termsandconfditionsd"/>
+
+</LinearLayout>

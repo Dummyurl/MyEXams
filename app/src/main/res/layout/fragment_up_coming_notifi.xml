@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.saxxis.myexams.fragments.notifications.UpComingNotifiFrag">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu"
+        android:id="@+id/upcoming_filter"
+        android:layout_gravity="right|end"
+        android:padding="10dp"
+        android:layout_margin="5dp"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ipcoming_progress"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="There are not any current job postings"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:id="@+id/nodataupcoming"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+            android:layout_weight="1"
+              android:id="@+id/recv_upcomnotif"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adbannerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.14"
+            ads:adSize="SMART_BANNER"
+            android:layout_gravity="bottom"
+            ads:adUnitId="@string/banner_home_footer"/>
+
+
+    </LinearLayout>
+</FrameLayout>

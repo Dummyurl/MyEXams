@@ -1,0 +1,274 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.saxxis.myexams.fragments.MyProfileFragment">
+
+   <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+       android:layout_weight="0.85">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/colorGreenDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:id="@+id/image_profile"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:text="Name : "
+                android:textColor="@color/colorGray"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/profile_dummy_name" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:textColor="@color/a_color"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_toRightOf="@id/profile_dummy_name"
+                android:layout_toEndOf="@id/profile_dummy_name"
+                android:id="@+id/profile_real_name"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:text="UserName : "
+                android:textColor="@color/colorGray"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/profile_dummy_username" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:textColor="@color/a_color"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_toRightOf="@id/profile_dummy_username"
+                android:layout_toEndOf="@id/profile_dummy_username"
+                android:id="@+id/profile_real_username"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:text="Email : "
+                android:padding="3dp"
+                android:textColor="@color/colorGray"
+                android:textSize="14sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/profile_dummy_email" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:textColor="@color/a_color"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_toRightOf="@id/profile_dummy_email"
+                android:layout_toEndOf="@id/profile_dummy_email"
+                android:id="@+id/profile_real_email"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:text="Registered Date : "
+                android:textColor="@color/colorGray"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/profile_dummy_rd" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:textColor="@color/a_color"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_toRightOf="@id/profile_dummy_rd"
+                android:layout_toEndOf="@id/profile_dummy_rd"
+                android:id="@+id/profile_real_rd"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number : "
+                android:textColor="@color/colorGray"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/profile_dummy_mn" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:textColor="@color/a_color"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:layout_toRightOf="@id/profile_dummy_mn"
+                android:layout_toEndOf="@id/profile_dummy_mn"
+                android:id="@+id/profile_real_mn"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="Edit Profile"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:background="@color/colorAccent"
+            android:id="@+id/edit_profile"/>
+    </LinearLayout>
+
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:text="Rate Me"
+            android:id="@+id/rateme"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:text="Share"
+            android:id="@+id/share"
+            android:padding="10dp"
+            android:drawableStart="@drawable/share"
+            android:drawableLeft="@drawable/share"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/leftnav_myprofile"
+        android:title="@string/myprofile"
+        />
+
+    <item
+        android:id="@+id/leftnav_exams"
+        android:title="@string/leftnav_exams"
+        />
+
+    <item
+        android:id="@+id/leftnav_subjects"
+        android:title="@string/leftnav_subjects"
+        />
+
+    <item
+        android:id="@+id/leftnav_academics"
+        android:title="@string/leftnav_academics"
+        />
+
+    <item
+        android:id="@+id/leftnav_packages"
+        android:title="@string/leftnav_packages"
+        />
+
+    <!--<item
+        android:id="@+id/leftnav_currentaffairs"
+        android:title="@string/leftnav_caff"/>-->
+    <item
+        android:id="@+id/leftnav_ca_english"
+        android:title="@string/leftnav_ca_eng" />
+    <item
+        android:id="@+id/leftnav_ca_telugu"
+        android:title="@string/leftnav_ca_tel" />
+    <item
+        android:id="@+id/leftnav_ca_hindi"
+        android:title="@string/leftnav_ca_hin" />
+
+    <item
+        android:id="@+id/leftnav_currentaff_quizz"
+        android:title="@string/leftnav_curraffquizz" />
+
+    <!--<item
+        android:title="@string/leftnav_latstupdates"
+        android:id="@+id/leftnav_latest_updates"/>-->
+
+    <item
+        android:id="@+id/leftnav_notifications"
+        android:title="@string/leftnav_noti"
+        />
+
+    <item
+        android:id="@+id/leftnav_trending"
+        android:title="@string/leftnav_trending"
+        />
+
+    <item
+        android:id="@+id/leftnav_logout"
+        android:title="@string/leftnav_logout"
+        />
+</menu>
