@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".app.MyExamsApp"
+        android:name="com.saxxis.myexams.app.MyExamsApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,7 +25,7 @@
             android:value="@string/app_name" />
 
         <activity
-            android:name=".activities.SplashActivity"
+            android:name="com.saxxis.myexams.activities.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,28 +34,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.LoginActivity"
+            android:name="com.saxxis.myexams.activities.LoginActivity"
             android:label="@string/login"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.saxxis.myexams.activities.MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.ExamsListActivity"
+            android:name="com.saxxis.myexams.activities.ExamsListActivity"
             android:label="@string/title_activity_exams"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.saxxis.myexams.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.CurrentAffairsActivity"
+            android:name="com.saxxis.myexams.activities.CurrentAffairsActivity"
             android:label="@string/title_activity_current_affairs"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -63,48 +63,48 @@
                 android:value="com.saxxis.myexams.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.NotificationActivity"
+            android:name="com.saxxis.myexams.activities.NotificationActivity"
             android:label="@string/title_activity_notification"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.saxxis.myexams.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.AcademicsActivity"
+            android:name="com.saxxis.myexams.activities.AcademicsActivity"
             android:label="@string/academics"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.saxxis.myexams.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.ExamPapersActivity"
+            android:name="com.saxxis.myexams.activities.ExamPapersActivity"
             android:label="@string/exampaper"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.CAffDetailActivity"
-            android:parentActivityName=".activities.CurrentAffairsActivity"
+            android:name="com.saxxis.myexams.activities.CAffDetailActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.CurrentAffairsActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.saxxis.myexams.activities.CurrentAffairsActivity" />
         </activity>
         <activity
-            android:name=".activities.ExamsDescriptionActivity"
+            android:name="com.saxxis.myexams.activities.ExamsDescriptionActivity"
             android:label="@string/title_activity_exams_description"
-            android:parentActivityName=".activities.SubjectsSubListActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.SubjectsSubListActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.saxxis.myexams.activities.SubjectsSubListActivity" />
         </activity>
         <activity
-            android:name=".activities.SubjectsActivity"
+            android:name="com.saxxis.myexams.activities.SubjectsActivity"
             android:label="@string/subjects"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -112,9 +112,9 @@
                 android:value="com.saxxis.myexams.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.SubjectsSubListActivity"
+            android:name="com.saxxis.myexams.activities.SubjectsSubListActivity"
             android:label="@string/CategoryList"
-            android:parentActivityName=".activities.SubjectsActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.SubjectsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -122,94 +122,94 @@
                 android:value="com.saxxis.myexams.activities.SubjectsActivity" />
         </activity>
         <activity
-            android:name=".activities.RegistrationActivity"
-            android:parentActivityName=".activities.LoginActivity"
+            android:name="com.saxxis.myexams.activities.RegistrationActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.LoginActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.saxxis.myexams.activities.LoginActivity" />
         </activity>
         <activity
-            android:name=".activities.AcademicSubListingActivity"
-            android:parentActivityName=".activities.AcademicsActivity"
+            android:name="com.saxxis.myexams.activities.AcademicSubListingActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.AcademicsActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.AcademicsActivity" />
+                android:value="com.saxxis.myexams.activities.AcademicsActivity" />
         </activity>
         <activity
-            android:name=".activities.LatestUpdatesActivity"
+            android:name="com.saxxis.myexams.activities.LatestUpdatesActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.examsresults.MyResultsActivity"
+            android:name="com.saxxis.myexams.activities.examsresults.MyResultsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.TimeLineActivity"
+            android:name="com.saxxis.myexams.activities.TimeLineActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.exampapers.ExamInstructsActivity"
+            android:name="com.saxxis.myexams.activities.exampapers.ExamInstructsActivity"
             android:label="Exam Paper"
-            android:parentActivityName=".activities.ExamsDescriptionActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.ExamsDescriptionActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.ExamsDescriptionActivity" />
+                android:value="com.saxxis.myexams.activities.ExamsDescriptionActivity" />
         </activity>
         <activity
-            android:name=".activities.FilterActivity"
+            android:name="com.saxxis.myexams.activities.FilterActivity"
             android:label="Select Category"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.EducationNewsActivity"
+            android:name="com.saxxis.myexams.activities.EducationNewsActivity"
             android:label="Latest Updates"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="com.saxxis.myexams.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.filters.NotificationFilter"
+            android:name="com.saxxis.myexams.activities.filters.NotificationFilter"
             android:label="Notifications"
-            android:parentActivityName=".activities.NotificationActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.NotificationActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name=".activities.NotificationActivity"
                 android:value="android.support.PARENT_ACTIVITY" />
         </activity>
         <activity
-            android:name=".activities.EducaitonDetailedActivity"
+            android:name="com.saxxis.myexams.activities.EducaitonDetailedActivity"
             android:screenOrientation="portrait" />
          <activity
-            android:name=".activities.MustReadDetailsActivity"
+            android:name="com.saxxis.myexams.activities.MustReadDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.DetailedNotificationsActivity"
+            android:name="com.saxxis.myexams.activities.DetailedNotificationsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.OrderDetailsActivity"
+            android:name="com.saxxis.myexams.activities.OrderDetailsActivity"
             android:label="Order Details"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.MyPurchasedExamsActivity"
+            android:name="com.saxxis.myexams.activities.MyPurchasedExamsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.CurrentAffairsQuizzActivity"
+            android:name="com.saxxis.myexams.activities.CurrentAffairsQuizzActivity"
             android:label="Current Affairs Quiz"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.EditProfileActivity"
+            android:name="com.saxxis.myexams.activities.EditProfileActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.TermsAndConditionsActivity"
+            android:name="com.saxxis.myexams.activities.TermsAndConditionsActivity"
             android:label="Terms &amp; Conditions"
-            android:parentActivityName=".activities.LoginActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.ForgotChangePasswordActivity"
+            android:name="com.saxxis.myexams.activities.ForgotChangePasswordActivity"
             android:label="Change Your Password"
-            android:parentActivityName=".activities.LoginActivity"
+            android:parentActivityName="com.saxxis.myexams.activities.LoginActivity"
             android:screenOrientation="portrait" />
 
         <!-- Include the AdActivity configChanges and theme. -->
@@ -233,10 +233,10 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CAInEnglishActivity" />
-        <activity android:name=".activities.CAInTeluguActivity" />
-        <activity android:name=".activities.CAInHindiActivity"></activity>
-        <activity android:name=".activities.SliderImageDetailsActivity"></activity>
+        <activity android:name="com.saxxis.myexams.activities.CAInEnglishActivity" />
+        <activity android:name="com.saxxis.myexams.activities.CAInTeluguActivity" />
+        <activity android:name="com.saxxis.myexams.activities.CAInHindiActivity"></activity>
+        <activity android:name="com.saxxis.myexams.activities.SliderImageDetailsActivity"></activity>
     </application>
 
 </manifest>

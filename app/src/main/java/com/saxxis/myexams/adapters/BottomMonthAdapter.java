@@ -9,7 +9,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.saxxis.myexams.R;
-import com.saxxis.myexams.model.QuizzFilterItems;
 import com.saxxis.myexams.model.QuizzFilterMonths;
 
 import java.util.ArrayList;

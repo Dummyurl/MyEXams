@@ -27,7 +27,6 @@ import com.saxxis.myexams.app.AppConstants;
 import com.saxxis.myexams.app.MyExamsApp;
 import com.saxxis.myexams.helper.utils.ItemClickSupport;
 import com.saxxis.myexams.helper.utils.RecvDecors;
-import com.saxxis.myexams.interfaces.OnLoadMoreListener;
 import com.saxxis.myexams.model.MustRead;
 import com.saxxis.myexams.model.QuizzFilterItems;
 

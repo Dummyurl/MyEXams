@@ -1,13 +1,9 @@
 package com.saxxis.myexams.fragments;
 
 
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.text.Spanned;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;

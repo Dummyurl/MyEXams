@@ -2,6 +2,7 @@ package com.saxxis.myexams.activities;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
@@ -14,6 +15,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -146,7 +148,8 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
                 behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
             }
         });
-
+        QuizzFilterItems.selectedId.clear();
+        QuizzFilterMonths.selectedId.clear();
         filterCategoryText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -261,7 +264,7 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
         Log.e("response", AppConstants.CURRENT_AFFAIRS_QUIZZ+language+months+quizid);
         AppHelper.showDialog(CurrentAffairsQuizzActivity.this,"Loading Please Wait...");
         System.out.println(AppConstants.CURRENT_AFFAIRS_QUIZZ+language+monthSelected+categorySelected);
-        StringRequest stringRequest = new StringRequest(AppConstants.CURRENT_AFFAIRS_QUIZZ+language+months+quizid,
+        StringRequest stringRequest = new StringRequest(AppConstants.CURRENT_AFFAIRS_QUIZZ+language+monthSelected+categorySelected,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -549,5 +552,22 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
             mAdView.destroy();
         }
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id=item.getItemId();
+        if (id==android.R.id.home){
+            finish();
+            return true;
+        }
+
+        if (id==R.id.action_home){
+            startActivity(new Intent(CurrentAffairsQuizzActivity.this,MainActivity.class));
+            finishAffinity();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

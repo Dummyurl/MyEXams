@@ -17,7 +17,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.saxxis.myexams.R;
-import com.saxxis.myexams.activities.exampapers.ExamInstructsActivity;
 import com.saxxis.myexams.activities.examsresults.MyResultsActivity;
 import com.saxxis.myexams.app.AppConstants;
 import com.saxxis.myexams.app.MyExamsApp;

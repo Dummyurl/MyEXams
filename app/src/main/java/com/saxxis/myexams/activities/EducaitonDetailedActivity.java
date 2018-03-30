@@ -3,13 +3,11 @@ package com.saxxis.myexams.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
 
@@ -19,18 +17,13 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.saxxis.myexams.R;
-import com.saxxis.myexams.adapters.EducationNewsAdapter;
 import com.saxxis.myexams.app.AppConstants;
 import com.saxxis.myexams.app.MyExamsApp;
 import com.saxxis.myexams.helper.AppHelper;
-import com.saxxis.myexams.helper.utils.ItemClickSupport;
 import com.saxxis.myexams.model.EducationNews;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

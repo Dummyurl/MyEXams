@@ -22,8 +22,6 @@ import com.saxxis.myexams.fragments.latestupdates.LatestUpdateLangFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.saxxis.myexams.R.id.container;
-
 public class CAInEnglishActivity extends AppCompatActivity {
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

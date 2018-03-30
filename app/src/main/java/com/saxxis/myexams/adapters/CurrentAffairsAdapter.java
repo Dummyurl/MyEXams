@@ -17,9 +17,6 @@ import com.saxxis.myexams.model.CurrentaffairsList;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
  * Created by android2 on 6/1/2017.
  */

@@ -2,16 +2,16 @@ package com.saxxis.myexams.fragments;
 
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -28,10 +28,12 @@ import com.saxxis.myexams.activities.EducaitonDetailedActivity;
 import com.saxxis.myexams.activities.ExamsDescriptionActivity;
 import com.saxxis.myexams.activities.SliderImageDetailsActivity;
 import com.saxxis.myexams.activities.SubjectsSubListActivity;
+import com.saxxis.myexams.adapters.ExamsAdapter;
 import com.saxxis.myexams.app.AppConstants;
 import com.saxxis.myexams.app.MyExamsApp;
 import com.saxxis.myexams.model.CurrentaffairsList;
 import com.saxxis.myexams.model.EducationNews;
+import com.saxxis.myexams.model.ExamTypes;
 import com.saxxis.myexams.model.LatestUpdates;
 import com.saxxis.myexams.model.SlidersHome;
 
@@ -324,7 +326,7 @@ public class HomeFragment extends Fragment {
   @OnClick(R.id.trend_appsc)
   void ontrend_appsc(){
       Intent inTrend_appsc=new Intent(getActivity(),SubjectsSubListActivity.class);
-      inTrend_appsc.putExtra("subjectid","1644");
+      inTrend_appsc.putExtra("subjectid","1532");
       inTrend_appsc.putExtra("subjectname","APPSC");
       startActivity(inTrend_appsc);
   }
@@ -332,7 +334,7 @@ public class HomeFragment extends Fragment {
   @OnClick(R.id.trend_tspsc)
     void ontrend_tspsc(){
       Intent inTrend_tspsc=new Intent(getActivity(),SubjectsSubListActivity.class);
-      inTrend_tspsc.putExtra("subjectid","1645");
+      inTrend_tspsc.putExtra("subjectid","1823");
       inTrend_tspsc.putExtra("subjectname","TSPSC");
       startActivity(inTrend_tspsc);
   }

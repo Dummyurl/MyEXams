@@ -20,7 +20,6 @@ import com.saxxis.myexams.R;
 import com.saxxis.myexams.app.AppConstants;
 import com.saxxis.myexams.app.MyExamsApp;
 import com.saxxis.myexams.helper.AppHelper;
-import com.saxxis.myexams.model.EducationNews;
 import com.saxxis.myexams.model.MustRead;
 
 import org.json.JSONException;

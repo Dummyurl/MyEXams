@@ -34,10 +34,8 @@ import com.saxxis.myexams.app.MyExamsApp;
 import com.saxxis.myexams.helper.AppHelper;
 import com.saxxis.myexams.helper.UserPrefs;
 import com.saxxis.myexams.model.CurrentAffairsQuizz;
-import com.saxxis.myexams.model.Questions;
 
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

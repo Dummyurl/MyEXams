@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.saxxis.myexams.R;
-import com.saxxis.myexams.activities.ExamsDescriptionActivity;
 import com.saxxis.myexams.activities.exampapers.ExamInstructsActivity;
 import com.saxxis.myexams.helper.UserPrefs;
 import com.saxxis.myexams.model.QuizzListList;

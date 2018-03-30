@@ -21,7 +21,6 @@ import com.saxxis.myexams.app.AppConstants;
 import com.saxxis.myexams.app.MyExamsApp;
 import com.saxxis.myexams.helper.AppHelper;
 import com.saxxis.myexams.model.LatestUpdates;
-import com.saxxis.myexams.model.MustRead;
 
 import org.json.JSONArray;
 import org.json.JSONException;
