@@ -252,10 +252,7 @@ public class ExamInstructFragment extends Fragment {
                     RadioButton rb = listOfRadioButtons.get(i);
                     rb.setChecked(false);
                 }
-//                radioButtonOne.setChecked(false);
-//                radioButtonTwo.setChecked(false);
-//                radioButtonThree.setChecked(false);
-//                radioButtonFour.setChecked(false);
+                rgAnsGrp.check(-1);
             }
         });
         GestureDetector.SimpleOnGestureListener simpleOnGestureListener = new GestureDetector.SimpleOnGestureListener(){
@@ -299,6 +296,7 @@ public class ExamInstructFragment extends Fragment {
 
     private void submitQuestion() {
         int rdAnswerId = rgAnsGrp.getCheckedRadioButtonId();
+        System.out.println(rdAnswerId+" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
         if(rdAnswerId == -1) {
             AppHelper.showToast("Please select an answer.");
         } else {
