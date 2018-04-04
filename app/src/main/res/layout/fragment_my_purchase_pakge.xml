@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.profiletabhosts.MyPurchasePakgeFragment">
+    tools:context="com.saxxis.myexamspace.fragments.profiletabhosts.MyPurchasePakgeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
         app:tabTextColor="@android:color/white"
         app:tabSelectedTextColor="@android:color/white"/>
 
-    <com.saxxis.myexams.helper.utils.CustomViewPager
+    <com.saxxis.myexamspace.helper.utils.CustomViewPager
         android:id="@+id/viewpager_packages"
         android:layout_width="match_parent"
         android:layout_height="0dp"

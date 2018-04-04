@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.SectionExamInstructFragment">
+    tools:context="com.saxxis.myexamspace.fragments.SectionExamInstructFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:icon="@drawable/correct_ans"/>
     </android.support.design.widget.TabLayout>
 
-    <com.saxxis.myexams.helper.utils.CustomViewPager
+    <com.saxxis.myexamspace.helper.utils.CustomViewPager
         android:id="@+id/exp_sec_exam_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

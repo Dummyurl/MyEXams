@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.saxxis.myexams.fragments.examdescribe.MaterialFragment">
+    tools:context="com.saxxis.myexamspace.fragments.examdescribe.MaterialFragment">
 
     <WebView
         android:id="@+id/section_label"

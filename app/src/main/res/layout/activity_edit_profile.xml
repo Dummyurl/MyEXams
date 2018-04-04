@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/cledtprofile"
-    tools:context="com.saxxis.myexams.activities.EditProfileActivity">
+    tools:context="com.saxxis.myexamspace.activities.EditProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"

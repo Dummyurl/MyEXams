@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.saxxis.myexams.fragments.myresult.subexplanation.ExplanationQuestionAnsFragment">
+    tools:context="com.saxxis.myexamspace.fragments.myresult.subexplanation.ExplanationQuestionAnsFragment">
 
     <ScrollView
         android:layout_width="match_parent"

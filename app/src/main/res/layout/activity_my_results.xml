@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:scrollbars="vertical"
-    tools:context="com.saxxis.myexams.activities.examsresults.MyResultsActivity">
+    tools:context="com.saxxis.myexamspace.activities.examsresults.MyResultsActivity">
     <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->
@@ -54,7 +54,7 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <com.saxxis.myexams.helper.utils.CustomViewPager
+    <com.saxxis.myexamspace.helper.utils.CustomViewPager
         android:id="@+id/cusviewpager_myresult"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

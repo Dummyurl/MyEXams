@@ -32,12 +32,12 @@
         "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\list_activated_holo.9.png"
     },
     {
-        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\btn_radio_on_focused_holo_light.png",
-        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\btn_radio_on_focused_holo_light.png"
-    },
-    {
         "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\spinner_disabled_holo_light.9.png",
         "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\spinner_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\btn_radio_on_focused_holo_light.png",
+        "source": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\btn_radio_on_focused_holo_light.png"
     },
     {
         "merged": "E:\\Android projects\\MyExams\\EBS\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\spinner_pressed_holo_light.9.png",

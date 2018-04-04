@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="com.saxxis.myexams.activities.FilterActivity">
+    tools:context="com.saxxis.myexamspace.activities.FilterActivity">
 
     <!--<android.support.v7.widget.RecyclerView-->
         <!--android:layout_width="match_parent"-->

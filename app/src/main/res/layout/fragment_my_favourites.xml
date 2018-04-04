@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.profiletabhosts.MyFavouritesFragment">
+    tools:context="com.saxxis.myexamspace.fragments.profiletabhosts.MyFavouritesFragment">
 
     <ProgressBar
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                 <!--android:textColor="@color/black"/>-->
         </LinearLayout>
 
-        <com.saxxis.myexams.helper.utils.CustomViewPager
+        <com.saxxis.myexamspace.helper.utils.CustomViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

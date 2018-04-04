@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.saxxis.myexams.activities.ExamsListActivity">
+    tools:context="com.saxxis.myexamspace.activities.ExamsListActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/exams_appbar"

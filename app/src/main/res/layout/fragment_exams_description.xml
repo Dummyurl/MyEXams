@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@android:color/white"
     android:id="@+id/replaceExamfragment"
-    tools:context="com.saxxis.myexams.activities.ExamsDescriptionActivity$PlaceholderFragment">
+    tools:context="com.saxxis.myexamspace.activities.ExamsDescriptionActivity$PlaceholderFragment">
 
     <!--<ScrollView-->
         <!--android:layout_width="match_parent"-->

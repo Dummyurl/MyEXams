@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.myresult.ExplanationFragment">
+    tools:context="com.saxxis.myexamspace.fragments.myresult.ExplanationFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         app:tabMode="scrollable"
         android:id="@+id/tab_explayout"/>
 
-    <com.saxxis.myexams.helper.utils.CustomViewPager
+    <com.saxxis.myexamspace.helper.utils.CustomViewPager
         android:id="@+id/exp_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"

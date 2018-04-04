@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.activities.CAffDetailActivity">
+    tools:context="com.saxxis.myexamspace.activities.CAffDetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         <!--android:layout_height="0dp"-->
         <!--android:layout_weight="1">-->
 
-    <com.saxxis.myexams.helper.utils.CustomViewPager
+    <com.saxxis.myexamspace.helper.utils.CustomViewPager
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

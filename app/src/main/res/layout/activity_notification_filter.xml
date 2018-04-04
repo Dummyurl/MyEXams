@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="com.saxxis.myexams.activities.filters.NotificationFilter">
+    tools:context="com.saxxis.myexamspace.activities.filters.NotificationFilter">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

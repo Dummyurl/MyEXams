@@ -1,35 +1,33 @@
 {
   "project_info": {
-    "project_number": "453867619096",
-    "firebase_url": "https://myexamspace.firebaseio.com",
-    "project_id": "myexamspace",
-    "storage_bucket": "myexamspace.appspot.com"
+    "project_number": "722978136485",
+    "project_id": "firebase-myexams"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:453867619096:android:335e9a90ce7b44e6",
+        "mobilesdk_app_id": "1:722978136485:android:e2a28294c88f79d9",
         "android_client_info": {
-          "package_name": "com.saxxis.myexams"
+          "package_name": "com.saxxis.myexamspace"
         }
       },
       "oauth_client": [
         {
-          "client_id": "453867619096-mv7ok6ains8q5a7qbh5jsqld90eq8eqe.apps.googleusercontent.com",
+          "client_id": "722978136485-l36brgdfsunimg1qk8juv5m7qbfceqcr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.saxxis.myexams",
-            "certificate_hash": "13b1d84fa32e7310d704c9c5e746ed6ca3bc5ab6"
+            "package_name": "com.saxxis.myexamspace",
+            "certificate_hash": "fa10ee2015bb8341c5c471ff8e574af689a73a39"
           }
         },
         {
-          "client_id": "453867619096-s21cu66li6epdbecupbp73ej76ahdlbp.apps.googleusercontent.com",
+          "client_id": "722978136485-f9t4lsmuef1umi27kv1kjbgnitiqetvm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAyxppW4MYIt1WRK9M_5_NoD-2SnYDYc2U"
+          "current_key": "AIzaSyASP1K7SWzkDrkv-Mt4RKiS4SCPDPkEymk"
         }
       ],
       "services": {
@@ -37,16 +35,11 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "453867619096-s21cu66li6epdbecupbp73ej76ahdlbp.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
-          "status": 2
+          "status": 1
         }
       }
     }

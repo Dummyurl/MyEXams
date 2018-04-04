@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorGrayDarker"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.TrendingFragment">
+    tools:context="com.saxxis.myexamspace.fragments.TrendingFragment">
 
     <ScrollView
         android:layout_width="match_parent"

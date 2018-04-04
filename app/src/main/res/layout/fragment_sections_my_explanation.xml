@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.myresult.subexplanation.SectionsMyExplanationFragment">
+    tools:context="com.saxxis.myexamspace.fragments.myresult.subexplanation.SectionsMyExplanationFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         app:tabMode="scrollable"
         android:id="@+id/tab_sectionnumber"/>
 
-    <com.saxxis.myexams.helper.utils.CustomViewPager
+    <com.saxxis.myexamspace.helper.utils.CustomViewPager
         android:id="@+id/exp_sec_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

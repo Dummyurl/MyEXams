@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.notifications.LatestNotificationsFrag">
+    tools:context="com.saxxis.myexamspace.fragments.notifications.LatestNotificationsFrag">
 
     <LinearLayout
         android:layout_width="match_parent"

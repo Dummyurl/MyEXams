@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.activities.EducaitonDetailedActivity">
+    tools:context="com.saxxis.myexamspace.activities.EducaitonDetailedActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

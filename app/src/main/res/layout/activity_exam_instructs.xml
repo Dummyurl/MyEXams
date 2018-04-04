@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.saxxis.myexams.activities.exampapers.ExamInstructsActivity">
+    tools:context="com.saxxis.myexamspace.activities.exampapers.ExamInstructsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -130,7 +130,7 @@
             </LinearLayout>
         </ScrollView>
 
-        <com.saxxis.myexams.helper.utils.CustomViewPager
+        <com.saxxis.myexamspace.helper.utils.CustomViewPager
             android:id="@+id/quizviewpagwer"
             android:layout_width="match_parent"
             android:layout_height="0dp"

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.saxxis.myexams.fragments.examdescribe.SyllabusFragment">
+    tools:context="com.saxxis.myexamspace.fragments.examdescribe.SyllabusFragment">
 
     <WebView
         android:id="@+id/syllabus_view"
@@ -31,7 +31,7 @@
             app:tabTextColor="@color/colorAccent"
             android:id="@+id/tab_syllabuslayout"/>
 
-        <com.saxxis.myexams.helper.utils.CustomViewPager
+        <com.saxxis.myexamspace.helper.utils.CustomViewPager
             android:id="@+id/syllabus_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
