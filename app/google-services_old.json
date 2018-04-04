@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "453867619096",
+    "firebase_url": "https://myexamspace.firebaseio.com",
+    "project_id": "myexamspace",
+    "storage_bucket": "myexamspace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453867619096:android:335e9a90ce7b44e6",
+        "android_client_info": {
+          "package_name": "com.saxxis.myexams"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453867619096-mv7ok6ains8q5a7qbh5jsqld90eq8eqe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saxxis.myexams",
+            "certificate_hash": "13b1d84fa32e7310d704c9c5e746ed6ca3bc5ab6"
+          }
+        },
+        {
+          "client_id": "453867619096-s21cu66li6epdbecupbp73ej76ahdlbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyxppW4MYIt1WRK9M_5_NoD-2SnYDYc2U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453867619096-s21cu66li6epdbecupbp73ej76ahdlbp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
