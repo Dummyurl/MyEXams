@@ -176,7 +176,7 @@ public class ExamInstructFragment extends Fragment {
             RadioButton rdbtn = new RadioButton(getActivity());
             rdbtn.setId(i);
             rdbtn.setTag(answerId+","+isCorrectAns);
-            System.out.println(ansStr.substring(ansStr.indexOf(">")+1));
+            //System.out.println(ansStr.substring(ansStr.indexOf(">")+1));
             if(ansStr.contains("<img")) {
                 WebView webView = new WebView(getActivity());
                 webView.loadData(ansStr.substring(ansStr.indexOf(">")+1), null, null);
@@ -296,7 +296,7 @@ public class ExamInstructFragment extends Fragment {
 
     private void submitQuestion() {
         int rdAnswerId = rgAnsGrp.getCheckedRadioButtonId();
-        System.out.println(rdAnswerId+" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+        //System.out.println(rdAnswerId+" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
         if(rdAnswerId == -1) {
             AppHelper.showToast("Please select an answer.");
         } else {

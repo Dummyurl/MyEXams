@@ -146,11 +146,11 @@ public class LatestNotificationsFrag extends Fragment {
                                 }
                                 notifcadata = NotificationParser.getmInstance(response).getData();
 
-                                if (notifcadata.size()==0){
+                                if (notifcadata != null && notifcadata.size()==0){
                                     noDataLatest.setVisibility(View.VISIBLE);
                                     latestResv.setVisibility(View.GONE);
                                 }
-                                if (notifcadata.size()>0){
+                                if (notifcadata != null && notifcadata.size()>0){
                                     noDataLatest.setVisibility(View.GONE);
                                     latestResv.setVisibility(View.VISIBLE);
 

@@ -32,6 +32,8 @@ public class MustReadDetailsActivity extends AppCompatActivity {
 
     @BindView(R.id.detl_latestupdates_title)
     TextView txtTitle;
+    @BindView(R.id.txtCreatedDate)
+    TextView txtDate;
 
     @BindView(R.id.detl_latestupdates_description)
     WebView txtDescription;
@@ -62,6 +64,7 @@ public class MustReadDetailsActivity extends AppCompatActivity {
 
         mData = getIntent().getExtras().getParcelable("detaildata");
         txtTitle.setText(AppHelper.fromHtml(mData.getTitle()));
+        txtDate.setText(AppHelper.spanDateFormater(mData.getCreated()));
         txtDescription.getSettings().setDefaultTextEncodingName("utf-8");
         txtDescription.getSettings().setJavaScriptEnabled(true);
         txtDescription.getSettings().setMinimumLogicalFontSize(16);

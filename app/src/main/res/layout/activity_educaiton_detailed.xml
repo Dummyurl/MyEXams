@@ -39,6 +39,18 @@
         android:textColor="@color/colorPrimaryDark"
         android:id="@+id/detl_latestupdates_title"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="#737373"
+        android:text="Date here"
+        android:gravity="center"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+        android:drawableStart="@android:drawable/ic_menu_my_calendar"
+        android:id="@+id/txtCreatedDate"/>
+
     <WebView
         android:layout_width="match_parent"
         android:layout_height="0dp"

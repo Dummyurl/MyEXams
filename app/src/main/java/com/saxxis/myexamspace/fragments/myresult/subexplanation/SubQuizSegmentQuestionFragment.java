@@ -212,7 +212,8 @@ public class SubQuizSegmentQuestionFragment extends Fragment {
                         //listOfRadioButtons.get(i).setPadding(20,10,20,10);
 //                            allRadioButtons[i - 1].setButtonDrawable(android.R.drawable.screen_background_light_transparent);
                     }
-
+                    listOfRadioButtons.get(i).setEnabled(false);
+                    listOfRadioButtons.get(i).setTextColor(getResources().getColor(R.color.black));
                     Animation slide = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_top);
                     explanation_layout.startAnimation(slide);
                     explanation_layout.setVisibility(View.VISIBLE);

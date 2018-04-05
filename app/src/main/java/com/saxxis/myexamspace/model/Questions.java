@@ -19,6 +19,8 @@ public class Questions implements Parcelable{
     private String Description;
     private String[] answers;
     private String Userdata;
+    private String cscore;
+    private String wscore;
 
 
 
@@ -35,14 +37,45 @@ public class Questions implements Parcelable{
         this.Description = description;
     }
 
+    public String getCscore() {
+        return cscore;
+    }
+
+    public void setCscore(String cscore) {
+        this.cscore = cscore;
+    }
+
+    public String getWscore() {
+        return wscore;
+    }
+
+    public void setWscore(String wscore) {
+        this.wscore = wscore;
+    }
+
     public Questions(String QuestionId, String Question, String questionIndex, String QuestionVersionId, String[] answers, String description){
 
         this.QuestionId=QuestionId;
         this.Question=Question;
         this.QuestionIndex=questionIndex;
+
         this.QuestionVersionId=QuestionVersionId;
         this.answers=answers;
         this.Description = description;
+    }
+
+    public Questions(String QuestionId, String Question, String questionIndex, String QuestionVersionId, String[] answers, String description, String cscore, String wscore){
+
+        this.QuestionId=QuestionId;
+        this.Question=Question;
+        this.QuestionIndex=questionIndex;
+
+        this.QuestionVersionId=QuestionVersionId;
+        this.answers=answers;
+        this.Description = description;
+        this.cscore = cscore;
+        this.wscore = wscore;
+
     }
 
     protected Questions(Parcel in) {
@@ -55,6 +88,8 @@ public class Questions implements Parcelable{
         answers = in.createStringArray();
         Userdata = in.readString();
         Description = in.readString();
+        cscore = in.readString();
+        wscore = in.readString();
     }
 
     public static final Creator<Questions> CREATOR = new Creator<Questions>() {
@@ -157,6 +192,8 @@ public class Questions implements Parcelable{
         dest.writeString(Description);
         dest.writeStringArray(answers);
         dest.writeString(Userdata);
+        dest.writeString(cscore);
+        dest.writeString(wscore);
     }
 
 

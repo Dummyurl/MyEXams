@@ -145,11 +145,11 @@ public class UpComingNotifiFrag extends Fragment {
                             if (objResponse.getString("status").equals("ok")){
                                 // JSONArray objdataarr=objResponse.getJSONArray("data");
                                 notifcadata = NotificationParser.getmInstance(response).getData();
-                                if (notifcadata.size()==0){
+                                if (notifcadata != null && notifcadata.size()==0){
                                     nodataUpcoming.setVisibility(View.VISIBLE);
                                     recvUpcoming.setVisibility(View.GONE);
                                 }
-                                if (notifcadata.size()>0) {
+                                if (notifcadata != null && notifcadata.size()>0) {
                                     nodataUpcoming.setVisibility(View.GONE);
                                     recvUpcoming.setVisibility(View.VISIBLE);
 

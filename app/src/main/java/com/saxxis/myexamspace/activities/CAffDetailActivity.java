@@ -55,7 +55,7 @@ public class CAffDetailActivity extends AppCompatActivity {
 
         CurrentaffairsList mData = getIntent().getExtras().getParcelable("detaildata");
         adapter = new CDetailsPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(CurrentAffaDetailedFragment.newInstance(mData.getTitle(),mData.getDescription()),"");
+        adapter.addFragment(CurrentAffaDetailedFragment.newInstance(mData.getTitle(),mData.getDescription(), mData.getCreated()),"");
 
 //        for (int i = 0; i < alldata.size(); i++) {
 //            adapter.addFragment(CurrentAffaDetailedFragment.newInstance(alldata.get(i).getTitle(),alldata.get(i).getDescription()),"");

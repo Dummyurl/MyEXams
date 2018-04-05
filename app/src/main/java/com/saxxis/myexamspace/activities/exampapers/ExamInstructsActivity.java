@@ -167,18 +167,20 @@ public class ExamInstructsActivity extends AppCompatActivity {
                                                     String Question =questionAnsObject.getString("Question");
                                                     String QuestionIndex =questionAnsObject.getString("QuestionIndex");
                                                     String QuestionVersionId = questionAnsObject.getString("QuestionVersionId");
+                                                    String cscore = questionAnsObject.getString("cscore");
+                                                    String wscore = questionAnsObject.getString("wscore");
                                                     String[] answers = questionAnsObject.getString("options").split("<answer id=");
                                                     String description = "";
                                                     if(questionAnsObject.has("Description")) {
                                                         description = questionAnsObject.getString("Description");
                                                     }
-                                                    qiData.add(new Questions(QuestionId,Question,QuestionIndex,QuestionVersionId,answers, description));
+                                                    qiData.add(new Questions(QuestionId,Question,QuestionIndex,QuestionVersionId,answers, description, cscore, wscore));
                                                 }
 
                                                 if (sectionsObject==null){
                                                     for (int J = 0; J < qiData.size(); J++) {
                                                         int i2 = J + 1;
-                                                        mQuestionSectPagerAdapter.addFragment(ExamInstructFragment.newInstance(qiData.get(J), "Question "+i2+" of "+qiData.size(),"","", i2, StatisticsInfoId, ticketId), i2 + "");
+                                                        mQuestionSectPagerAdapter.addFragment(ExamInstructFragment.newInstance(qiData.get(J), "Question "+i2+" of "+qiData.size(),qiData.get(J).getCscore(),qiData.get(J).getWscore(), i2, StatisticsInfoId, ticketId), i2 + "");
                                                     }
 
                                                     quizzviewpager.setPagingEnabled(true);
