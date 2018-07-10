@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EBS/EBS.iml" filepath="$PROJECT_DIR$/EBS/EBS.iml" />
       <module fileurl="file://$PROJECT_DIR$/MPChartLib/MPChartLib.iml" filepath="$PROJECT_DIR$/MPChartLib/MPChartLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MyExams.iml" filepath="$PROJECT_DIR$/MyExams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyEXams.iml" filepath="$PROJECT_DIR$/MyEXams.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/facebook-android-sdk-4.27.0/facebook-android-sdk-4.27.0.iml" filepath="$PROJECT_DIR$/facebook-android-sdk-4.27.0/facebook-android-sdk-4.27.0.iml" />
     </modules>

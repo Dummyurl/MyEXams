@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -57,10 +58,10 @@ public class MyFavouritesFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private  UserPrefs userPrefs;
+    private UserPrefs userPrefs;
 
     CustomViewPager customViewPager;
-    TextView txtQuestionNumber,nofavfound;
+    TextView txtQuestionNumber, nofavfound;
     ImageView imgFavourite;//,imgReport;
 
     LinearLayout content_favlist;
@@ -112,12 +113,12 @@ public class MyFavouritesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_favourites, container, false);
 
         customViewPager = (CustomViewPager) view.findViewById(fav_custmviewpager);
-        txtQuestionNumber =(TextView)view.findViewById(R.id.question_number);
-        nofavfound = (TextView)view.findViewById(R.id.nofavfound);
-        imgFavourite = (ImageView)view.findViewById(R.id.remove_favourite);
+        txtQuestionNumber = (TextView) view.findViewById(R.id.question_number);
+        nofavfound = (TextView) view.findViewById(R.id.nofavfound);
+        imgFavourite = (ImageView) view.findViewById(R.id.remove_favourite);
 
-        content_favlist = (LinearLayout)view.findViewById(R.id.content_favlist);
-        progressBar = (ProgressBar)view.findViewById(R.id.progress_fav);
+        content_favlist = (LinearLayout) view.findViewById(R.id.content_favlist);
+        progressBar = (ProgressBar) view.findViewById(R.id.progress_fav);
         //imgReport = (ImageView)view.findViewById(R.id.report_question);
 
         adapter = new MyFavPagerAdapter(fragmentManager);
@@ -133,7 +134,7 @@ public class MyFavouritesFragment extends Fragment {
 
 
     private void getFavourites() {
-        Log.d("response",AppConstants.MY_FAVOURITEXS + userPrefs.getUserId());
+        Log.d("response", AppConstants.MY_FAVOURITEXS + userPrefs.getUserId());
         progressBar.setVisibility(View.VISIBLE);
         content_favlist.setVisibility(View.GONE);
         customViewPager.setVisibility(View.VISIBLE);
@@ -145,13 +146,12 @@ public class MyFavouritesFragment extends Fragment {
                             progressBar.setVisibility(View.GONE);
                             content_favlist.setVisibility(View.VISIBLE);
                             adapter = new MyFavPagerAdapter(fragmentManager);
-                            Log.e("response",s);
+                            Log.e("response", s);
                             JSONObject jsonObject = new JSONObject(s);
 //                            favouritesList = new ArrayList<>();
-                            if (jsonObject.getString("status").equals("ok")){
+                            if (jsonObject.getString("status").equals("ok")) {
                                 if (fragmentManager.getFragments() != null) {
                                     fragmentManager.getFragments().clear();
-
                                     List<Fragment> fragments = fragmentManager.getFragments();
                                     if (fragments != null) {
                                         FragmentTransaction ft = fragmentManager.beginTransaction();
@@ -166,7 +166,9 @@ public class MyFavouritesFragment extends Fragment {
                                         customViewPager.removeAllViews();
                                         ft.commitAllowingStateLoss();
                                     }
-                                    if (favouritesList!=null){
+
+                                    adapter.clearList();
+                                    if (favouritesList != null) {
                                         favouritesList.clear();
                                     }
                                     adapter.notifyDataSetChanged();
@@ -177,24 +179,24 @@ public class MyFavouritesFragment extends Fragment {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject objData = jsonArray.getJSONObject(i);
                                     favouritesList.add(new MyFavourites(objData.getString("QuestionVersionId"),
-                                            objData.getString("StatisticsInfoId"),objData.getString("UserId"),objData.getString("CreatedDate"),
-                                            objData.getString("Status"),objData.getString("QuestionId"),objData.getString("QuestionTypeId"),
-                                            objData.getString("Question"),objData.getString("Solution"),objData.getString("HashCode"),objData.getString("Created"),
-                                            objData.getString("CreatedBy"),objData.getString("Data"),objData.getString("ShowAsImage"),objData.getString("Score"),
-                                            objData.getString("wscore"),objData.getString("comp"),objData.getString("CompId"),objData.getString("PublishedDate")));
+                                            objData.getString("StatisticsInfoId"), objData.getString("UserId"), objData.getString("CreatedDate"),
+                                            objData.getString("Status"), objData.getString("QuestionId"), objData.getString("QuestionTypeId"),
+                                            objData.getString("Question"), objData.getString("Solution"), objData.getString("HashCode"), objData.getString("Created"),
+                                            objData.getString("CreatedBy"), objData.getString("Data"), objData.getString("ShowAsImage"), objData.getString("Score"),
+                                            objData.getString("wscore"), objData.getString("comp"), objData.getString("CompId"), objData.getString("PublishedDate")));
                                 }
 
 
-                                if (favouritesList.size()!=0){
+                                if (favouritesList.size() != 0) {
                                     nofavfound.setVisibility(View.GONE);
                                     content_favlist.setVisibility(View.VISIBLE);
                                     for (int i = 0; i < favouritesList.size(); i++) {
-                                        int i2=i+1;
-                                        adapter.addFragment(MyFavouriteQuestionFragment.newInstance(favouritesList.get(i),"Question "+i2+" of "+favouritesList.size()),i2+"");
+                                        int i2 = i + 1;
+                                        adapter.addFragment(MyFavouriteQuestionFragment.newInstance(favouritesList.get(i), "Question " + i2 + " of " + favouritesList.size()), i2 + "");
                                     }
                                     customViewPager.setAdapter(adapter);
                                 }
-                                if (favouritesList.size()==0){
+                                if (favouritesList.size() == 0) {
                                     content_favlist.setVisibility(View.GONE);
                                     nofavfound.setVisibility(View.VISIBLE);
                                 }
@@ -203,17 +205,19 @@ public class MyFavouritesFragment extends Fragment {
 
 
 //                            final ArrayList<MyFavourites> finalFavouritesList = favouritesList;
-                            txtQuestionNumber.setText("Question 1 of "+favouritesList.size());
+                            txtQuestionNumber.setText("Question 1 of " + favouritesList.size());
                             customViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                                 @Override
                                 public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
                                 }
+
                                 @Override
                                 public void onPageSelected(int position) {
-                                    int positionone=position+1;
-                                    txtQuestionNumber.setText("Question "+positionone+" of "+favouritesList.size());
+                                    int positionone = position + 1;
+                                    txtQuestionNumber.setText("Question " + positionone + " of " + favouritesList.size());
                                 }
+
                                 @Override
                                 public void onPageScrollStateChanged(int state) {
 
@@ -223,41 +227,40 @@ public class MyFavouritesFragment extends Fragment {
                             imgFavourite.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    if (favouritesList.size()>0){
-
-                                    new AlertDialog.Builder(getActivity())
-                                            .setTitle("Are You Sure ?")
-                                            .setMessage("Remove This Item From Favourites")
-                                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    Log.e("response",AppConstants.REMOVE_FACOURITE + favouritesList.get(customViewPager.getCurrentItem()).getQuestionVersionId()+ "&userid=" + userPrefs.getUserId());
-                                                    AppHelper.showDialog(getActivity(),"Loading Please Wait...");
-                                                    StringRequest favRequest = new
-                                                            StringRequest(AppConstants.REMOVE_FACOURITE + favouritesList.get(customViewPager.getCurrentItem()).getQuestionVersionId()+ "&userid=" + userPrefs.getUserId(),
-                                                            new Response.Listener<String>() {
-                                                                @Override
-                                                                public void onResponse(String s) {
-                                                                    AppHelper.hideDialog();
-                                                                    Log.e("response",s);
-                                                                    getFavourites();
-                                                                }
-                                                            }, new Response.ErrorListener() {
-                                                        @Override
-                                                        public void onErrorResponse(VolleyError volleyError) {
-
-                                                        }
-                                                    });
-                                                    dialog.dismiss();
-                                                    MyExamsApp.getMyInstance().addToRequestQueue(favRequest);
-                                                }
-                                            })
-                                            .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    dialog.dismiss();
-                                                }
-                                            }).create().show();
+                                    if (favouritesList.size() > 0) {
+                                        new AlertDialog.Builder(getActivity())
+                                                .setTitle("Are You Sure ?")
+                                                .setMessage("Remove This Item From Favourites")
+                                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        Log.e("response", AppConstants.REMOVE_FACOURITE + favouritesList.get(customViewPager.getCurrentItem()).getQuestionVersionId() + "&userid=" + userPrefs.getUserId());
+                                                        AppHelper.showDialog(getActivity(), "Loading Please Wait...");
+                                                        StringRequest favRequest = new
+                                                                StringRequest(AppConstants.REMOVE_FACOURITE + favouritesList.get(customViewPager.getCurrentItem()).getQuestionVersionId() + "&userid=" + userPrefs.getUserId(),
+                                                                new Response.Listener<String>() {
+                                                                    @Override
+                                                                    public void onResponse(String s) {
+                                                                        AppHelper.hideDialog();
+                                                                        Log.e("response", s);
+                                                                        getFavourites();
+                                                                    }
+                                                                }, new Response.ErrorListener() {
+                                                            @Override
+                                                            public void onErrorResponse(VolleyError volleyError) {
+                                                                Toast.makeText(getContext(), volleyError.getMessage(), Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        });
+                                                        dialog.dismiss();
+                                                        MyExamsApp.getMyInstance().addToRequestQueue(favRequest);
+                                                    }
+                                                })
+                                                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        dialog.dismiss();
+                                                    }
+                                                }).create().show();
                                     }
 //                                    customViewPager.removeViewAt(customViewPager.getCurrentItem());
 //                                    adapter.notifyDataSetChanged();
@@ -311,8 +314,13 @@ public class MyFavouritesFragment extends Fragment {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public MyFavPagerAdapter(FragmentManager fm){
+        public MyFavPagerAdapter(FragmentManager fm) {
             super(fm);
+        }
+
+        public void clearList() {
+            mFragmentList.clear();
+            mFragmentTitleList.clear();
         }
 
         @Override
