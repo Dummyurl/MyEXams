@@ -10,8 +10,6 @@ public class QuizzFilterItems {
     private String examtypename;
     private String examtypeid;
 
-    public static ArrayList<String> selectedId=new ArrayList<>();
-
     public QuizzFilterItems(String examtypeid,String examtypename) {
         this.examtypeid = examtypeid;
         this.examtypename = examtypename;
@@ -32,11 +30,5 @@ public class QuizzFilterItems {
     public void setExamtypeid(String examtypeid) {
         this.examtypeid = examtypeid;
     }
-
-    public ArrayList<String> getSelectedId() {
-        return selectedId;
-    }
-
-
 
 }

@@ -12,6 +12,7 @@ import com.saxxis.myexamspace.R;
 import com.saxxis.myexamspace.model.QuizzFilterItems;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by saxxis25 on 10/13/2017.
@@ -19,34 +20,45 @@ import java.util.ArrayList;
 
 public class BottomItemAdapter extends RecyclerView.Adapter<BottomItemAdapter.BottomItemHolder> {
 
-    ArrayList<QuizzFilterItems> mData;
-    Context context;
-    public BottomItemAdapter(ArrayList<QuizzFilterItems> mData, Context context){
-        this.mData=mData;
-        this.context=context;
+    private ArrayList<QuizzFilterItems> mData;
+    private Context context;
+    private List<String> mSelected;
+
+    public BottomItemAdapter(Context context) {
+        mData = new ArrayList<>();
+        this.context = context;
+        mSelected = new ArrayList<>();
     }
 
     @Override
     public BottomItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.bottomlayout_filteritem,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.bottomlayout_filteritem, parent, false);
         return new BottomItemHolder(view);
+    }
+
+    public List<String> getSelected() {
+        return mSelected;
     }
 
     @Override
     public void onBindViewHolder(BottomItemHolder holder, final int position) {
         holder.txtBottomItem.setText(mData.get(position).getExamtypename());
+
+        if (mSelected.contains(mData.get(position).getExamtypeid())) {
+            holder.txtBottomItem.setOnCheckedChangeListener(null);
+            holder.txtBottomItem.setChecked(true);
+        } else {
+            holder.txtBottomItem.setOnCheckedChangeListener(null);
+            holder.txtBottomItem.setChecked(false);
+        }
+
         holder.txtBottomItem.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    QuizzFilterItems.selectedId.add(mData.get(position).getExamtypeid());
-                }
-                if (!isChecked){
-                    for (int i = 0; i < QuizzFilterItems.selectedId.size(); i++) {
-                        if (mData.get(position).getExamtypeid().equals(QuizzFilterItems.selectedId.get(i))){
-                            QuizzFilterItems.selectedId.remove(i);
-                        }
-                    }
+                if (isChecked) {
+                    mSelected.add(mData.get(position).getExamtypeid());
+                } else {
+                    mSelected.remove(position);
                 }
             }
         });
@@ -58,11 +70,17 @@ public class BottomItemAdapter extends RecyclerView.Adapter<BottomItemAdapter.Bo
         return mData.size();
     }
 
-    public class BottomItemHolder extends RecyclerView.ViewHolder{
+    public void addItems(List<QuizzFilterItems> quizzFilteritems) {
+        mData.addAll(quizzFilteritems);
+        notifyDataSetChanged();
+    }
+
+    public class BottomItemHolder extends RecyclerView.ViewHolder {
         CheckBox txtBottomItem;
+
         public BottomItemHolder(View itemView) {
             super(itemView);
-            txtBottomItem = (CheckBox)itemView.findViewById(R.id.btmitm_text);
+            txtBottomItem = (CheckBox) itemView.findViewById(R.id.btmitm_text);
 
         }
     }

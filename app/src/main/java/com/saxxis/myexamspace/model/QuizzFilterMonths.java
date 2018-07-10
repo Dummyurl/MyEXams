@@ -10,8 +10,6 @@ public class QuizzFilterMonths {
     private String examtypename;
     private String examtypeid;
 
-    public static ArrayList<String> selectedId=new ArrayList<>();
-
     public QuizzFilterMonths(String examtypeid, String examtypename) {
         this.examtypeid = examtypeid;
         this.examtypename = examtypename;
@@ -32,11 +30,4 @@ public class QuizzFilterMonths {
     public void setExamtypeid(String examtypeid) {
         this.examtypeid = examtypeid;
     }
-
-    public ArrayList<String> getSelectedId() {
-        return selectedId;
-    }
-
-
-
 }

@@ -85,8 +85,8 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
 
     FragmentManager fragmentManager;
 
-    int language=1;
-    String monthYear="";
+    int language = 1;
+    String monthYear = "";
     SectionPagerAdapter adapter;
     ArrayList<CurrentAffairsQuizz> quixxData;
 
@@ -94,18 +94,15 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
     ArrayList<String> selecteddates = new ArrayList<>();
     boolean[] checkedColors = new boolean[13];
 
-//    Bottom sheet items
+    //    Bottom sheet items
     BottomSheetBehavior behavior;
     RecyclerView recyclerView;
-    TextView cancelText,filterCategoryText, filterMonthText;
+    TextView cancelText, filterCategoryText, filterMonthText;
     private BottomItemAdapter mBottomAdapter;
     private BottomMonthAdapter mBottomMonthAdapter;
-    String categorySelected="", monthSelected="";
-    ArrayList<QuizzFilterItems> quizzFilteritems = new ArrayList<>();
-    ArrayList<QuizzFilterMonths> quizMonthItems = new ArrayList<>();
-
+    String categorySelected = "", monthSelected = "";
     private AdView mAdView;
-
+    private List<QuizzFilterItems> quizzFilteritems;
 //     horizontallview components
 //    @BindView(R.id.horizontalmonthyear)
 //    HorizontalScrollView horizontallView;
@@ -120,49 +117,51 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mAdView = (AdView)findViewById(R.id.adbannerquizzView);
+        mAdView = (AdView) findViewById(R.id.adbannerquizzView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
         /*
-        * analytics tracker */
+         * analytics tracker */
 
         mTracker = MyExamsApp.getMyInstance().getDefaultTracker();
         mTracker.setScreenName("Current Affairs Quizz");
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
-       // monthYear = "&months[]="+AppHelper.getSelectMonth(new Date());
+        // monthYear = "&months[]="+AppHelper.getSelectMonth(new Date());
 
         quixxData = new ArrayList<>();
-        getAllData("","");
+        getAllData("", "");
 
         fragmentManager = getSupportFragmentManager();
 
         View bottomSheet = findViewById(R.id.bottom_sheet);
         behavior = BottomSheetBehavior.from(bottomSheet);
-        cancelText =(TextView)bottomSheet.findViewById(R.id.cancel_filter);
-        filterCategoryText =(TextView)bottomSheet.findViewById(R.id.filter_selection);
-        filterMonthText =(TextView)bottomSheet.findViewById(R.id.filter_month);
+        cancelText = (TextView) bottomSheet.findViewById(R.id.cancel_filter);
+        filterCategoryText = (TextView) bottomSheet.findViewById(R.id.filter_selection);
+        filterMonthText = (TextView) bottomSheet.findViewById(R.id.filter_month);
         cancelText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
             }
         });
-        QuizzFilterItems.selectedId.clear();
-        QuizzFilterMonths.selectedId.clear();
+
         filterCategoryText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                String categorydata="";
-                for (int i = 0; i <= QuizzFilterItems.selectedId.size(); i++) {
-                    if (i!=QuizzFilterItems.selectedId.size()){
-                        Log.e("response",QuizzFilterItems.selectedId.get(i));
-                        categorydata += "&catids[]="+QuizzFilterItems.selectedId.get(i);
+                String categorydata = "";
+
+                List<String> selectedIds = mBottomAdapter.getSelected();
+
+                for (int i = 0; i <= selectedIds.size(); i++) {
+                    if (i != selectedIds.size()) {
+                        Log.e("response", selectedIds.get(i));
+                        categorydata += "&catids[]=" + selectedIds.get(i);
                     }
-                    if (i==QuizzFilterItems.selectedId.size()){
+                    if (i == selectedIds.size()) {
                         categorySelected = categorydata;
-                        getAllData(monthYear,categorydata);
+                        getAllData(monthYear, categorydata);
                     }
                 }
             }
@@ -171,23 +170,26 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                String monthdata="";
-                Log.e("month", Integer.toString(QuizzFilterMonths.selectedId.size()     ));
-                for (int i = 0; i <= QuizzFilterMonths.selectedId.size(); i++) {
-                    if (i!=QuizzFilterMonths.selectedId.size()){
-                        Log.e("response",QuizzFilterMonths.selectedId.get(i));
-                        monthdata += "&months[]="+QuizzFilterMonths.selectedId.get(i);
+                String monthdata = "";
+
+                List<String> selectedIds = mBottomMonthAdapter.getSelected();
+
+                for (int i = 0; i <= selectedIds.size(); i++) {
+                    if (i != selectedIds.size()) {
+                        Log.e("response", selectedIds.get(i));
+                        monthdata += "&months[]=" + selectedIds.get(i);
                     }
-                    if (i==QuizzFilterMonths.selectedId.size()){
+
+                    if (i == selectedIds.size()) {
                         monthSelected = monthdata;
                         Log.e("month", monthdata);
-                        getAllData(monthdata,"");
+                        getAllData(monthdata, "");
                     }
                 }
             }
         });
 
-        recyclerView = (RecyclerView)bottomSheet.findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) bottomSheet.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -196,29 +198,31 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            Log.d("response",response);
-                            JSONObject jsonObject=new JSONObject(response);
-                            JSONArray datajsonArray=jsonObject.getJSONArray("data");
+                            Log.d("response", response);
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONArray datajsonArray = jsonObject.getJSONArray("data");
+                            quizzFilteritems = new ArrayList<>();
 
                             for (int i = 0; i < datajsonArray.length(); i++) {
-                                    JSONObject dataObject = datajsonArray.getJSONObject(i);
-                                    quizzFilteritems.add(new QuizzFilterItems(dataObject.getString("examtypeid"),
-                                            dataObject.getString("examtypename")));
+                                JSONObject dataObject = datajsonArray.getJSONObject(i);
+                                quizzFilteritems.add(new QuizzFilterItems(dataObject.getString("examtypeid"),
+                                        dataObject.getString("examtypename")));
                             }
 
-                            mBottomAdapter = new BottomItemAdapter(quizzFilteritems, CurrentAffairsQuizzActivity.this);
-                            recyclerView.setAdapter(mBottomAdapter);
+                            mBottomAdapter = new BottomItemAdapter(CurrentAffairsQuizzActivity.this);
+                            mBottomAdapter.addItems(quizzFilteritems);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                    }},
+                    }
+                },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        }
+                    }
                 });
 
-       MyExamsApp.getMyInstance().addToRequestQueue(stringRequest);
+        MyExamsApp.getMyInstance().addToRequestQueue(stringRequest);
 
 //        ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
 //            @Override
@@ -228,14 +232,13 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
 //        });
 
 
-
     }
 
     public class SectionPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public SectionPagerAdapter(FragmentManager fm){
+        public SectionPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -260,19 +263,19 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
         }
     }
 
-    public void getAllData(String months,String quizid){
-        Log.e("response", AppConstants.CURRENT_AFFAIRS_QUIZZ+language+months+quizid);
-        AppHelper.showDialog(CurrentAffairsQuizzActivity.this,"Loading Please Wait...");
-        System.out.println(AppConstants.CURRENT_AFFAIRS_QUIZZ+language+monthSelected+categorySelected);
-        StringRequest stringRequest = new StringRequest(AppConstants.CURRENT_AFFAIRS_QUIZZ+language+monthSelected+categorySelected,
+    public void getAllData(String months, String quizid) {
+        Log.e("response", AppConstants.CURRENT_AFFAIRS_QUIZZ + language + months + quizid);
+        AppHelper.showDialog(CurrentAffairsQuizzActivity.this, "Loading Please Wait...");
+        System.out.println(AppConstants.CURRENT_AFFAIRS_QUIZZ + language + monthSelected + categorySelected);
+        StringRequest stringRequest = new StringRequest(AppConstants.CURRENT_AFFAIRS_QUIZZ + language + monthSelected + categorySelected,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            Log.d("response",response);
+                            Log.d("response", response);
                             JSONObject jsonObject = new JSONObject(response);
                             JSONArray datajsonArray = jsonObject.getJSONArray("data");
-                            if (datajsonArray.length()==0){
+                            if (datajsonArray.length() == 0) {
                                 Toast.makeText(CurrentAffairsQuizzActivity.this, "Question are not found", Toast.LENGTH_SHORT).show();
                             }
 
@@ -295,7 +298,7 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
                                 }
                                 adapter.notifyDataSetChanged();
 
-                                if (quixxData!=null){
+                                if (quixxData != null) {
                                     quixxData.clear();
                                 }
                             }
@@ -309,10 +312,10 @@ public class CurrentAffairsQuizzActivity extends AppCompatActivity {
                                         dataObject.getString("ClassName"), dataObject.getString("Created"), dataObject.getString("QtypeName"), dataObject.getString("QlevelName"), dataObject.getString("examtypename"),
                                         dataObject.getString("CategoryName"), dataObject.getString("SubjectName"), dataObject.getString("SublevelName"), dataObject.getString("SubchapterName"), dataObject.getString("fevorite")));
                             }
-System.out.println("Questions size:::::::::::::::::::::::::::::::::::::::::::::: "+quixxData.size());
+                            System.out.println("Questions size:::::::::::::::::::::::::::::::::::::::::::::: " + quixxData.size());
                             for (int i = 0; i < quixxData.size(); i++) {
-                                int i2=i+1;
-                                adapter.addFragment(SubQuizSegmentQuestionFragment.newInstance(quixxData.get(i),"Question "+i2+" of "+quixxData.size()),i+1+"");
+                                int i2 = i + 1;
+                                adapter.addFragment(SubQuizSegmentQuestionFragment.newInstance(quixxData.get(i), "Question " + i2 + " of " + quixxData.size()), i + 1 + "");
                             }
 
                             AppHelper.hideDialog();
@@ -321,8 +324,8 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
                             next.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    if (customViewPager.getCurrentItem()<quixxData.size()-1){
-                                        customViewPager.setCurrentItem(customViewPager.getCurrentItem()+1);
+                                    if (customViewPager.getCurrentItem() < quixxData.size() - 1) {
+                                        customViewPager.setCurrentItem(customViewPager.getCurrentItem() + 1);
                                     }
                                 }
                             });
@@ -330,8 +333,8 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
                             previous.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    if (customViewPager.getCurrentItem()!=0){
-                                        customViewPager.setCurrentItem(customViewPager.getCurrentItem()-1);
+                                    if (customViewPager.getCurrentItem() != 0) {
+                                        customViewPager.setCurrentItem(customViewPager.getCurrentItem() - 1);
                                     }
                                 }
                             });
@@ -351,18 +354,18 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
     }
 
     @OnClick(R.id.select_language)
-    void onLanguageClick(){
-        final String[] languagetitles={"English","Telugu","Hindi"};
+    void onLanguageClick() {
+        final String[] languagetitles = {"English", "Telugu", "Hindi"};
         new AlertDialog.Builder(CurrentAffairsQuizzActivity.this)
                 .setItems(languagetitles, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         selectLanguage.setText(languagetitles[which]);
-                        language = which+1;
+                        language = which + 1;
                         for (int i = 0; i < checkedColors.length; i++) {
-                            checkedColors[i]=false;
+                            checkedColors[i] = false;
                         }
-                        getAllData("",categorySelected);
+                        getAllData("", categorySelected);
                     }
                 })
                 .create().show();
@@ -370,34 +373,40 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
 
     @OnClick(R.id.select_month)
     void onMonthSelected() {
+        txtExamType.setText("SELECT THE EXAM MONTH");
+        filterCategoryText.setVisibility(View.GONE);
+        filterMonthText.setVisibility(View.VISIBLE);
+
         final CharSequence[] allDates = new CharSequence[13];
         String maxDate = AppHelper.getSelectMonth(new Date());
         final SimpleDateFormat monthDate = new SimpleDateFormat("yyyy-MM");
         final Calendar cal = Calendar.getInstance();
-
         try {
             cal.setTime(monthDate.parse(maxDate));
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
+        List<QuizzFilterMonths> quizMonthItems = new ArrayList<>();
+
         for (int i = 1; i <= 13; i++) {
             String month_name1 = monthDate.format(cal.getTime());
-            allDates[i-1] = month_name1;
+            allDates[i - 1] = month_name1;
             cal.add(Calendar.MONTH, -1);
             quizMonthItems.add(new QuizzFilterMonths(month_name1, month_name1));
         }
 
-        txtExamType.setText("SELECT THE EXAM MONTH");
-        filterCategoryText.setVisibility(View.GONE);
-        filterMonthText.setVisibility(View.VISIBLE);
-        mBottomMonthAdapter = new BottomMonthAdapter(quizMonthItems, CurrentAffairsQuizzActivity.this);
+        if (mBottomMonthAdapter == null) {
+            mBottomMonthAdapter = new BottomMonthAdapter(CurrentAffairsQuizzActivity.this);
+            mBottomMonthAdapter.addItems(quizMonthItems);
+        }
+
         recyclerView.setAdapter(mBottomMonthAdapter);
 
-        if (behavior.getState()== BottomSheetBehavior.STATE_EXPANDED){
+        if (behavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
             behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         }
-        if (behavior.getState()==BottomSheetBehavior.STATE_COLLAPSED){
+        if (behavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
             behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         }
 
@@ -469,7 +478,7 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
 
 
     @OnClick(R.id.select_examtype)
-    void onSelectType(){
+    void onSelectType() {
         onFabSelection();
 
 //    List<String> strings = new ArrayList<>();
@@ -500,17 +509,17 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
 
 
     //    @OnClick(R.id.fab_selection)
-    void onFabSelection(){
+    void onFabSelection() {
 //        behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         txtExamType.setText("SELECT YOUR EXAM TYPE");
         filterCategoryText.setVisibility(View.VISIBLE);
         filterMonthText.setVisibility(View.GONE);
-        mBottomAdapter = new BottomItemAdapter(quizzFilteritems, CurrentAffairsQuizzActivity.this);
         recyclerView.setAdapter(mBottomAdapter);
-        if (behavior.getState()== BottomSheetBehavior.STATE_EXPANDED){
+
+        if (behavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
             behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         }
-        if (behavior.getState()==BottomSheetBehavior.STATE_COLLAPSED){
+        if (behavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
             behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         }
 
@@ -556,14 +565,14 @@ System.out.println("Questions size::::::::::::::::::::::::::::::::::::::::::::::
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id=item.getItemId();
-        if (id==android.R.id.home){
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
             finish();
             return true;
         }
 
-        if (id==R.id.action_home){
-            startActivity(new Intent(CurrentAffairsQuizzActivity.this,MainActivity.class));
+        if (id == R.id.action_home) {
+            startActivity(new Intent(CurrentAffairsQuizzActivity.this, MainActivity.class));
             finishAffinity();
             return true;
         }
