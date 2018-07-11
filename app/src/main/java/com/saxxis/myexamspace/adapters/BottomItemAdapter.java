@@ -58,7 +58,7 @@ public class BottomItemAdapter extends RecyclerView.Adapter<BottomItemAdapter.Bo
                 if (isChecked) {
                     mSelected.add(mData.get(position).getExamtypeid());
                 } else {
-                    mSelected.remove(position);
+                    mSelected.remove(mData.get(position).getExamtypeid());
                 }
             }
         });

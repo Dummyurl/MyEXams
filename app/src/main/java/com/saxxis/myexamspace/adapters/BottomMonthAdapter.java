@@ -56,7 +56,7 @@ public class BottomMonthAdapter extends RecyclerView.Adapter<BottomMonthAdapter.
                 if (isChecked) {
                     mSelected.add(mData.get(position).getExamtypeid());
                 } else {
-                    mSelected.remove(position);
+                    mSelected.remove(mData.get(position).getExamtypeid());
                 }
             }
         });
